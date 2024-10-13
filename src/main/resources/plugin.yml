@@ -1,0 +1,5 @@
+name: SkZen
+version: '${project.version}'
+main: com.faiizer.skzen.SkZen
+api-version: '1.20'
+load: STARTUP
