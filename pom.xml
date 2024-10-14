@@ -6,7 +6,7 @@
 
   <groupId>com.faiizer</groupId>
   <artifactId>SkZen</artifactId>
-  <version>1.0</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
 
   <name>SkZen</name>
@@ -103,7 +103,7 @@
       <dependency>
           <groupId>com.github.SkriptLang</groupId>
           <artifactId>Skript</artifactId>
-          <version>2.9.0</version>
+          <version>2.7.0</version>
           <scope>provided</scope>
       </dependency>
   </dependencies>
