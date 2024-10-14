@@ -2,24 +2,12 @@
 
 **SkZen** is a French [**Skript**](https://github.com/SkriptLang/Skript) addon with a focus on simplicity and potential.
 While its journey is *just beginning*, **SkZen** promises to grow and evolve with many updates and features on the way.
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-Stay tuned for more! ! :3
-=======
-=======
->>>>>>> f8e9247af587dfacf4d8643edb906304215ff7b7
->>>>>>> Stashed changes
 
 ## Features
 
 - **Toast Notifications**: Easily send toast notifications to players in your Skript scripts.
     - Example:
       ```plaintext
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
       set {_toast} to a new task toast with message "Hello, world!" and icon emerald block
       toast {_toast} to player
       ```
@@ -57,16 +45,6 @@ command /toast:
         send "&r  &c- Icon : %{_icon}%" to player
 ```
 
-=======
->>>>>>> Stashed changes
-      set {_toast} to toast with message "Hello, world!" and icon bread
-      toast {_toast} to player
-      ```
-
-<<<<<<< Updated upstream
-=======
->>>>>>> f8e9247af587dfacf4d8643edb906304215ff7b7
->>>>>>> Stashed changes
 ## Upcoming Features
 
 - More features and enhancements are planned for future releases. Stay tuned for updates!
@@ -75,13 +53,4 @@ command /toast:
 
 - **Faiizer**: Developer and creator of SkZen.
 
-<<<<<<< Updated upstream
 Stay tuned for more updates! :3
-=======
-<<<<<<< HEAD
-Stay tuned for more updates! :3
->>>>>>> Stashed changes
-=======
-Stay tuned for more updates! :3
->>>>>>> f8e9247af587dfacf4d8643edb906304215ff7b7
->>>>>>> Stashed changes
