@@ -1,5 +1,6 @@
 package com.faiizer.skzen.elements.toast.effect;
 
+import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser;
@@ -12,6 +13,10 @@ import org.bukkit.event.Event;
 import javax.annotation.Nullable;
 
 public class EffSendToastToPlayer extends Effect {
+
+    static {
+        Skript.registerEffect(EffSendToastToPlayer.class, "toast %toast% to %player%");
+    }
 
     private Expression<Toast> toast;
     private Expression<Player> player;

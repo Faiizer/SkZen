@@ -1,7 +1,9 @@
 package com.faiizer.skzen.elements.toast.expression;
 
+import ch.njol.skript.Skript;
 import ch.njol.skript.aliases.ItemType;
 import ch.njol.skript.lang.Expression;
+import ch.njol.skript.lang.ExpressionType;
 import ch.njol.skript.lang.SkriptParser;
 import ch.njol.skript.lang.util.SimpleExpression;
 import ch.njol.util.Kleenean;
@@ -13,6 +15,11 @@ import org.bukkit.event.Event;
 import javax.annotation.Nullable;
 
 public class ExprToast extends SimpleExpression<Toast> {
+
+    static {
+        Skript.registerExpression(ExprToast.class, Toast.class, ExpressionType.SIMPLE,
+                "[a] [new] (task|goal|challenge) toast with message \"%string%\" and icon %itemtype%");
+    }
 
     private String frame;
     private Expression<String> message;

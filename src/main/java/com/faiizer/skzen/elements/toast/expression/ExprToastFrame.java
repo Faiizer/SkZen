@@ -1,7 +1,9 @@
 package com.faiizer.skzen.elements.toast.expression;
 
+import ch.njol.skript.Skript;
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.expressions.base.SimplePropertyExpression;
+import ch.njol.skript.lang.ExpressionType;
 import com.faiizer.skzen.SkZen;
 import com.faiizer.skzen.elements.toast.type.Toast;
 import org.bukkit.event.Event;
@@ -10,6 +12,12 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ExprToastFrame extends SimplePropertyExpression<Toast, String> {
+
+    static {
+        Skript.registerExpression(ExprToastFrame.class, String.class, ExpressionType.PROPERTY,
+                "frame of %toast%",
+                "%toast%'s frame");
+    }
 
     @Override
     protected String getPropertyName() {

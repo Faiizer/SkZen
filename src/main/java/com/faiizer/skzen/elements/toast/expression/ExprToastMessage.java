@@ -1,11 +1,19 @@
 package com.faiizer.skzen.elements.toast.expression;
 
+import ch.njol.skript.Skript;
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.expressions.base.SimplePropertyExpression;
+import ch.njol.skript.lang.ExpressionType;
 import com.faiizer.skzen.elements.toast.type.Toast;
 import org.bukkit.event.Event;
 
 public class ExprToastMessage extends SimplePropertyExpression<Toast, String> {
+
+    static {
+        Skript.registerExpression(ExprToastMessage.class, String.class, ExpressionType.PROPERTY,
+                "message of %toast%",
+                "%toast%'s message");
+    }
 
     @Override
     protected String getPropertyName() {

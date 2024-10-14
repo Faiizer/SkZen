@@ -2,29 +2,15 @@ package com.faiizer.skzen;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;
-import ch.njol.skript.classes.ClassInfo;
-import ch.njol.skript.classes.Parser;
-import ch.njol.skript.lang.ExpressionType;
-import ch.njol.skript.lang.ParseContext;
-import ch.njol.skript.registrations.Classes;
 import ch.njol.skript.util.Version;
 import com.faiizer.skzen.config.Config;
-import com.faiizer.skzen.elements.toast.ToastRegisterer;
-import com.faiizer.skzen.elements.toast.effect.EffSendToastToPlayer;
-import com.faiizer.skzen.elements.toast.expression.ExprToast;
-import com.faiizer.skzen.elements.toast.type.Toast;
-import org.bukkit.Material;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
-import org.checkerframework.checker.nullness.qual.Nullable;
 
 import java.io.IOException;
 import java.util.logging.Logger;
 
-/**
- * @hidden
- */
+
 public class AddonLoader {
 
     private final SkZen plugin;
@@ -79,7 +65,12 @@ public class AddonLoader {
             logger.info("&5Toast Elements &cdisabled via config");
             return;
         }
-        new ToastRegisterer();
-        logger.info("&5Toast Elements &asuccessfully loaded");
+        try {
+            addon.loadClasses("com.faiizer.skzen.elements.toast");
+            logger.info("&5Toast Elements &asuccessfully loaded");
+        } catch (IOException ex) {
+            logger.severe(ex.toString());
+            pluginManager.disablePlugin(this.plugin);
+        }
     }
 }
