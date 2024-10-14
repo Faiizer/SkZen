@@ -12,6 +12,9 @@ public class Config {
     private FileConfiguration config;
     private File configFile;
 
+    // Config elements
+    public static boolean ELEMENTS_TOAST;
+
     public Config(SkZen plugin) {
         this.plugin = plugin;
         loadConfigFile();
@@ -25,6 +28,17 @@ public class Config {
             plugin.saveResource("config.yml", false);
         }
         config = YamlConfiguration.loadConfiguration(configFile);
+
+        loadConfigs();
+    }
+
+
+    private boolean getElement(String element) {
+        return this.config.getBoolean("elements." + element);
+    }
+
+    private void loadConfigs() {
+        this.ELEMENTS_TOAST = getElement("toast");
     }
 
 }

@@ -14,7 +14,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 /**
  * Main class of SkZen.
  */
-public final class SkZen extends JavaPlugin implements Listener {
+public final class SkZen extends JavaPlugin {
 
     private static SkZen instance;
     private Config config;
@@ -33,17 +33,7 @@ public final class SkZen extends JavaPlugin implements Listener {
             return;
         }
 
-        pm.registerEvents(this, this);
-
         getLogger().info("&aSuccessfully enabled !");
-    }
-
-    @EventHandler
-    public void onChat(PlayerChatEvent event) {
-        ToastNotification notification = new ToastNotification(new ItemStack(Material.BREAD),
-                "SALUUUUT ceci est le message du toast",
-                AdvancementDisplay.AdvancementFrame.TASK);
-        notification.send(event.getPlayer());
     }
 
 

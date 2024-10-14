@@ -1,10 +1,10 @@
-package com.faiizer.skzen.effect;
+package com.faiizer.skzen.elements.toast.effect;
 
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser;
 import ch.njol.util.Kleenean;
-import com.faiizer.skzen.toast.Toast;
+import com.faiizer.skzen.elements.toast.type.Toast;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
@@ -26,12 +26,11 @@ public class EffSendToastToPlayer extends Effect {
 
     @Override
     public String toString(@Nullable Event e, boolean b) {
-        return "send toast to player";
+        return "toast %toast% to %player%";
     }
 
     @Override
     protected void execute(Event e) {
         toast.getSingle(e).send(player.getSingle(e));
-        Bukkit.broadcastMessage(String.valueOf(toast));
     }
 }
