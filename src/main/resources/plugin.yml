@@ -1,5 +1,9 @@
+main: com.faiizer.skzen.SkZen
 name: SkZen
 version: '${project.version}'
-main: com.faiizer.skzen.SkZen
+description: "A simple Skript addon to help customize your server to the fullest."
 api-version: '1.20'
-load: STARTUP
+author: Faiizer
+website: https://github.com/Faiizer/SkZen
+depend:
+  - Skript
